@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker Info</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://i.postimg.cc/ykrPnKdF/background.jpg'); /* Background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8); /* Transparent black background */
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #fff; /* White text color */
+        }
+
+        .tile-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Increased gap between tiles */
+            margin: 30px 0;
+        }
+
+        .tile {
+            background: rgba(96, 96, 96, 0.6); /* Light grey transparent background */
+            backdrop-filter: blur(10px); /* Blur effect */
+            padding: 30px; /* Increased padding */
+            width: 100%;
+            max-width: 600px; /* Maximum width */
+            margin: 0 auto;
+            border-radius: 10px;
+            color: #fff; /* White text color */
+        }
+
+        .tile h2 {
+            margin: 0;
+            font-size: 24px; /* Increased font size */
+        }
+
+        .tile p, .tile ul {
+            margin: 10px 0;
+            font-size: 16px; /* Font size */
+        }
+
+        .tile ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .tile li {
+            margin-bottom: 10px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 100px; /* Increased size */
+            height: 100px; /* Increased size */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .start-button {
+            background-color: rgba(96, 96, 96, 0.6); /* Transparent lighter grey background */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px; /* Increased font size */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .start-button:hover {
+            background-color: rgba(96, 96, 96, 0.8); /* Slightly less transparent on hover */
+        }
+
+        @media (max-width: 768px) {
+            .tile {
+                padding: 20px; /* Adjust padding for mobile */
+                font-size: 14px; /* Smaller font size for mobile */
+            }
+
+            .profile-picture {
+                width: 80px; /* Smaller size for mobile */
+                height: 80px; /* Smaller size for mobile */
+            }
+
+            .start-button {
+                font-size: 16px; /* Smaller font size for mobile */
+                padding: 10px 20px; /* Smaller padding for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Habit Tracker</h1>
+        <div class="tile-container">
+            <div class="tile" id="how-to-use">
+                <h2>How to Use the Habit Tracker</h2>
+                <ul>
+                    <li><strong>Select the month</strong>: Use the dropdown to choose the month you want to track.</li>
+                    <li><strong>Add/Edit habits</strong>: Click on the habit headers to edit or add new habits.</li>
+                    <li><strong>Track your habits</strong>: Click on the cells corresponding to the days to mark the completion of habits.</li>
+                    <li><strong>View your progress</strong>: Check the chart to see how well you are doing and review the completion statistics.</li>
+                </ul>
+            </div>
+            <div class="tile" id="about-me">
+                <div class="profile-container">
+                    <img src="https://i.postimg.cc/tZCk24hN/profile.jpg" alt="Profile Picture" class="profile-picture">
+                    <h2>About Me</h2>
+                </div>
+                <p>Hello! I’m Amogh Raikar, a passionate 16-year-old student currently in class 11. My interests span across coding and design, and I find immense joy in creating innovative solutions and visually appealing designs.</p>
+                <p>With a keen eye for detail and a love for problem-solving, I dive deep into various programming languages and tools, always eager to learn and adapt. My creative pursuits are not just confined to the screen; I enjoy experimenting with new ideas and techniques in both code and design.</p>
+                <p>When I'm not immersed in my studies or working on projects, I like to explore new technologies and stay updated with the latest trends in the tech world. I believe that continuous learning and curiosity are key to staying ahead in this ever-evolving field.</p>
+                <p>Feel free to connect with me and explore my work. I'm always excited to collaborate and share knowledge with like-minded individuals!</p>
+            </div>
+        </div>
+        <button class="start-button" onclick="goToHabitTracker()">Get Started</button>
+    </div>
+
+    <script>
+        function goToHabitTracker() {
+            window.location.href = 'habit-tracker.html'; // Adjust this to the path of your habit tracker page
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
