@@ -3,112 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit Tracker Info</title>
+    <title>Habit Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: url('https://i.postimg.cc/ykrPnKdF/background.jpg'); /* Background image URL */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
             margin: 0;
-            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://i.postimg.cc/hJtv79yP/background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-
         .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.8); /* Transparent black background */
-            padding: 30px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            color: #fff; /* White text color */
+            color: #ecf0f1;
         }
-
         h1 {
-            margin-bottom: 30px;
-        }
-
-        .tile {
-            background: rgba(96, 96, 96, 0.6); /* Light grey transparent background */
-            backdrop-filter: blur(10px); /* Blur effect */
-            padding: 20px;
-            border-radius: 10px;
-            color: #fff; /* White text color */
-            margin-bottom: 30px;
-        }
-
-        .tile h2 {
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        .tile p, .tile ul {
-            margin: 10px 0;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .tile ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        .tile li {
+            font-size: 2em;
             margin-bottom: 10px;
         }
-
-        .start-button {
-            background-color: rgba(96, 96, 96, 0.6); /* Transparent lighter grey background */
+        .info {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .info h2 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+        .info p {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .get-started-btn {
+            padding: 8px 16px;
+            font-size: 1em;
             color: white;
-            padding: 12px 25px;
-            font-size: 16px;
+            background-color: #3498db;
             border: none;
-            border-radius: 10px;
+            border-radius: 6px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
-
-        .start-button:hover {
-            background-color: rgba(96, 96, 96, 0.8); /* Slightly less transparent on hover */
-        }
-
-        @media (max-width: 768px) {
-            .tile {
-                padding: 15px;
-                font-size: 12px; /* Smaller font size for mobile */
-            }
-
-            .start-button {
-                font-size: 14px;
-                padding: 10px 20px;
-            }
+        .get-started-btn:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Habit Tracker</h1>
-        <div class="tile">
+        <div class="info">
             <h2>How to Use the Habit Tracker</h2>
-            <ul>
-                <li><strong>Select the month:</strong> Use the dropdown to choose the month you want to track.</li>
-                <li><strong>Add/Edit habits:</strong> Click on the habit headers to edit or add new habits.</li>
-                <li><strong>Track your habits:</strong> Click on the cells corresponding to the days to mark the completion of habits.</li>
-                <li><strong>View your progress:</strong> Check the chart to see how well you are doing and review the completion statistics.</li>
-            </ul>
+            <p><strong>Track Your Daily Habits:</strong> Log your progress each day to build and maintain good habits.</p>
+            <p><strong>Select a Month:</strong> Choose the month you want to track. This will display a calendar.</p>
+            <p><strong>Add Your Habits:</strong> Add up to 10 habits. Click “+” to add a new habit and name it by editing the header.</p>
+            <p><strong>Log Your Progress:</strong> Click the cell under each habit to mark it as completed. A checkmark will appear.</p>
+            <p><strong>Review Your Progress:</strong> View charts to see your progress over time and identify habits that need focus.</p>
+            <p><strong>Customize Your Habits:</strong> Add or remove habits as needed using the “+” and “-” buttons.</p>
+            <p><strong>Save Your Data:</strong> Regularly update your data to review your progress anytime.</p>
+            <p><strong>Stay Consistent:</strong> Use the Habit Tracker daily to stay accountable and on track.</p>
         </div>
-        <button class="start-button" onclick="goToHabitTracker()">Get Started</button>
+        <a href="habit-tracker.html" class="get-started-btn">Get Started</a>
     </div>
-
-    <script>
-        function goToHabitTracker() {
-            window.location.href = 'habit-tracker.html'; // Adjust this to the path of your habit tracker page
-        }
-    </script>
 </body>
 </html>
