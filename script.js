@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const selectedUser = localStorage.getItem('selectedUser');
-    if (!selectedUser) {
-        alert('No user selected! Redirecting to the user selection page.');
-        window.location.href = 'index.html';
+   
     } else {
         populateTable();
     }
