@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const selectedUser = localStorage.getItem('selectedUser');
-   
-    } else {
-        populateTable();
-    }
+    // Removed the user selection check logic since it's not needed anymore.
+    populateTable(); // Directly populate the table when the page loads
 });
 
 function populateTable() {
@@ -87,26 +84,21 @@ function updateData() {
         data.push(rowData);
     }
 
-    const selectedUser = localStorage.getItem('selectedUser');
-    if (selectedUser) {
-        localStorage.setItem(`${selectedUser}_habitData`, JSON.stringify(data));
-    }
+    // Save data in localStorage
+    localStorage.setItem(`habitData`, JSON.stringify(data));
 
     alert('Data updated!');
 }
 
 function loadData() {
-    const selectedUser = localStorage.getItem('selectedUser');
-    if (selectedUser) {
-        const savedData = JSON.parse(localStorage.getItem(`${selectedUser}_habitData`));
-        if (savedData) {
-            const table = document.getElementById('habitTable');
-            for (let i = 0; i < savedData.length; i++) {
-                const row = table.rows[i];
-                for (let j = 0; j < savedData[i].length; j++) {
-                    if (savedData[i][j]) {
-                        row.cells[j].classList.add('clicked');
-                    }
+    const savedData = JSON.parse(localStorage.getItem(`habitData`));
+    if (savedData) {
+        const table = document.getElementById('habitTable');
+        for (let i = 0; i < savedData.length; i++) {
+            const row = table.rows[i];
+            for (let j = 0; j < savedData[i].length; j++) {
+                if (savedData[i][j]) {
+                    row.cells[j].classList.add('clicked');
                 }
             }
         }
@@ -144,8 +136,8 @@ function updateChart() {
     const table = document.getElementById('habitTable');
     const daysInMonth = table.rows.length - 1;
 
-    // Update datasets
     habitChart.data.datasets = [];
+
     for (let i = 1; i <= numberOfHabits; i++) {
         habitChart.data.datasets.push({
             label: `Habit ${i}`,
@@ -156,7 +148,6 @@ function updateChart() {
         });
     }
 
-    // Update data for each dataset
     for (let i = 1; i <= numberOfHabits; i++) {
         const data = [];
         for (let j = 1; j <= daysInMonth; j++) {
