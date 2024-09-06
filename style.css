@@ -1,0 +1,180 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('https://i.postimg.cc/hJtv79yP/image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 95%;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+select {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background-color: rgba(236, 240, 241, 0.8);
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover, select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.table-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    color: #ecf0f1;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+th[contenteditable="true"] {
+    background-color: rgba(41, 128, 185, 0.8);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+th[contenteditable="true"]:hover, th[contenteditable="true"]:focus {
+    background-color: rgba(31, 97, 141, 0.8);
+}
+
+.clickable-cell {
+    cursor: pointer;
+    position: relative;
+}
+
+.clickable-cell::after {
+    content: '\2714'; /* Unicode character for a checkmark */
+    color: #27ae60;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.clickable-cell.clicked::after {
+    opacity: 1;
+}
+
+.habit-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-habit-button, .remove-habit-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+}
+
+.add-habit-button:hover, .remove-habit-button:hover {
+    background: #2980b9;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.chart-container {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
