@@ -1,78 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit Tracker - Welcome</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: url('https://i.postimg.cc/hJtv79yP/background-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-            max-width: 500px;
-            text-align: center;
-            color: #ecf0f1;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-        .info {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .info h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .info p {
-            font-size: 0.9em;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        .get-started-btn {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            background-color: #3498db;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-        .get-started-btn:hover {
-            background-color: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Pictures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Habit Tracker</h1>
-        <div class="info">
-            <h2>How to Use the Habit Tracker</h2>
-            <p><strong>Track Your Daily Habits:</strong> Log your progress each day to build and maintain good habits.</p>
-            <p><strong>Select a Month:</strong> Choose the month you want to track. This will display a calendar.</p>
-            <p><strong>Add Your Habits:</strong> Add up to 10 habits. Click “+” to add a new habit and name it by editing the header.</p>
-            <p><strong>Log Your Progress:</strong> Click the cell under each habit to mark it as completed. A checkmark will appear.</p>
-            <p><strong>Review Your Progress:</strong> View charts to see your progress over time and identify habits that need focus.</p>
-            <p><strong>Customize Your Habits:</strong> Add or remove habits as needed using the “+” and “-” buttons.</p>
-            <p><strong>Save Your Data:</strong> Regularly update your data to review your progress anytime.</p>
-            <p><strong>Stay Consistent:</strong> Use the Habit Tracker daily to stay accountable and on track.</p>
-        </div>
-        <a href="habit-tracker.html" class="get-started-btn">Get Started</a>
-    </div>
+  <h1>My Pictures</h1>
+  <div class="gallery">
+    <!-- Add images here -->
+    <img src="28f74950-e3aa-4d71-a6a3-c6efefcac129.jpg" alt="Notebook Image">
+  </div>
 </body>
 </html>
